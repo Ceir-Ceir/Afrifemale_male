@@ -1,0 +1,85 @@
+.programsPage {
+  padding: var(--space-xl) 0;
+}
+
+.intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+.programGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.programCard {
+  background: white;
+  border-radius: 20px;
+  padding: var(--space-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.programCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary);
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(33, 62, 140, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+}
+
+.programCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.programCard p {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  flex-grow: 1;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.cta:hover {
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+}

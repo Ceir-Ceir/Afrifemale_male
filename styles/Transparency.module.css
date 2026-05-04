@@ -1,0 +1,120 @@
+.transparencyPage {
+  padding: var(--space-xl) 0;
+}
+
+.intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.transparencyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-xl);
+  align-items: flex-start;
+  margin-bottom: var(--space-xl);
+}
+
+.chartCard {
+  background: white;
+  padding: var(--space-lg);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.chartCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Simple CSS Pie Chart / Legend */
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.barWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.barLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.barBg {
+  height: 12px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+
+.barFill.secondary {
+  background: var(--color-secondary);
+}
+
+.barFill.muted {
+  background: var(--color-muted);
+}
+
+.reportsSection {
+  background: #f8f9fa;
+  padding: var(--space-lg);
+  border-radius: 20px;
+}
+
+.reportsSection h2 {
+  margin-bottom: 1.5rem;
+}
+
+.reportLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.reportLink:hover {
+  border-color: var(--color-primary);
+  transform: translateX(5px);
+}
+
+.reportLink span {
+  font-weight: 600;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  background: #eee;
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .transparencyGrid {
+    grid-template-columns: 1fr;
+  }
+}

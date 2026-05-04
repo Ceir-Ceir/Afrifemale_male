@@ -1,0 +1,98 @@
+.footer {
+  background-color: var(--color-bg-dark);
+  color: white;
+  padding: var(--space-xl) 0 var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.brandInfo h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-family: var(--font-family-heading);
+}
+
+.brandInfo p {
+  opacity: 0.8;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.footerCol h4 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-family: var(--font-family-heading);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footerCol h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.footerCol p, .footerList li {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.8rem;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+}
+
+.footerList a {
+  color: white;
+  opacity: 0.8;
+  transition: var(--transition-smooth);
+}
+
+.footerList a:hover {
+  opacity: 1;
+  color: var(--color-primary);
+  padding-left: 5px;
+}
+
+.contactLink {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-md);
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.bottomBar p {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}

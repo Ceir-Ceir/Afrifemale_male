@@ -1,0 +1,104 @@
+:root {
+  /* Color Palette */
+  --color-primary: #8e2794;    /* Brand Purple */
+  --color-secondary: #213E8C;  /* Navy Blue */
+  --color-accent: #f8f9fa;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #ffffff;
+  --color-muted: #6c757d;
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #121212;
+
+  /* Typography */
+  --font-family-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-heading: 'Outfit', 'Inter', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-family-primary);
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-secondary);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.section-padding {
+  padding: var(--space-lg) 0;
+}
+
+.primary-btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(200, 72, 105, 0.2);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 72, 105, 0.3);
+  filter: brightness(1.1);
+}
+
+.secondary-btn {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.secondary-btn:hover {
+  filter: brightness(1.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

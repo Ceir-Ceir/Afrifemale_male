@@ -1,0 +1,82 @@
+.newsletterSection {
+  background-color: #f8f9fa;
+  padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+  text-align: center;
+}
+
+.newsletterSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletterSection p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.8;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.input {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  flex: 1;
+  min-width: 200px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.submitBtn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.submitBtn:hover {
+  filter: brightness(1.1);
+  transform: translateX(3px);
+}
+
+.privacyText {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 576px) {
+  .form {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    flex-direction: column;
+    border-radius: 0;
+  }
+  .input {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+}
