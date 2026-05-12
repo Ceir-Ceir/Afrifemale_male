@@ -31,6 +31,11 @@ jobs:
         env:
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
 
+      # GitHub Pages ignores directories starting with _ by default (Jekyll behavior).
+      # This file tells GitHub Pages to serve _next/ assets correctly.
+      - name: Add .nojekyll
+        run: touch out/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
