@@ -7,8 +7,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image src="/images/logo.png" alt="Afri-Female Institute Logo" width={50} height={50} style={{ objectFit: 'contain', marginRight: '10px' }} />
-          AFRI-<span className={styles.logoHighlight}>FEMALE</span>
+          <Image src="/images/logo.png" alt="Afri-Female and Male Institute Logo" width={50} height={50} style={{ objectFit: 'contain', marginRight: '10px' }} />
+          AFRI-<span className={styles.logoHighlight}>FEMALE & MALE</span>
         </Link>
 
         <nav className={styles.nav}>

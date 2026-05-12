@@ -127,7 +127,7 @@ export default function GalleryPage() {
           <span className={styles.headerLabel}>Our Memories</span>
           <h1>Event Gallery</h1>
           <p>
-            Explore the memorable moments, programs, and workshops that make up the Afri-Female Institute&apos;s rich history.
+            Explore the memorable moments, programs, and workshops that make up the Afri-Female and Male Institute&apos;s rich history.
           </p>
         </FadeIn>
 

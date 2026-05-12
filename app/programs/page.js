@@ -4,9 +4,24 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/Animations';
 export default function Programs() {
   const programs = [
     {
+      title: "STEAM Education",
+      icon: "🔬",
+      description: "We use Science, Technology, Engineering, Art, and Math as powerful training tools to help students discover their gifts, strengthen their confidence, and expand their future opportunities."
+    },
+    {
+      title: "Aviation Exploration",
+      icon: "✈️",
+      description: "Our students receive hands-on instruction in aviation, opening their eyes to careers in aerospace and building discipline through the precision of flight education."
+    },
+    {
       title: "One-on-One Mentoring",
       icon: "🤝",
-      description: "We link our youth with professionals and community leaders to develop supportive, one-on-one relationships. Mentors instill positive self-esteem and self-control."
+      description: "We link our youth with professionals and community leaders — including doctors, lawyers, clergy, and educators — to develop supportive, one-on-one relationships that instill positive self-esteem."
+    },
+    {
+      title: "Life Skills & Cultural Education",
+      icon: "🌱",
+      description: "Addressing essential areas like communication, decision-making, healthy relationships, conflict resolution, and cultural heritage through engaging, twice-monthly workshops."
     },
     {
       title: "Financial Literacy",
@@ -14,24 +29,9 @@ export default function Programs() {
       description: "From basic budgeting to entrepreneurship, we prepare our youth for economic independence and responsible wealth management."
     },
     {
-      title: "Life Skills Training",
-      icon: "🌱",
-      description: "Addressing essential areas like communication, decision-making, healthy relationships, and conflict resolution."
-    },
-    {
-      title: "Career Readiness",
-      icon: "📋",
-      description: "Resume writing, job interview skills, and job-shadowing opportunities to bridge the gap between education and employment."
-    },
-    {
       title: "Leadership Development",
       icon: "👑",
-      description: "We provide opportunities for planning, decision-making, and community service to help youth become proud, self-confident leaders."
-    },
-    {
-      title: "Violence Prevention",
-      icon: "🛡️",
-      description: "Our mentors strive to direct teens toward positive alternatives and teach them about delinquency prevention and healthy alternatives."
+      description: "We empower youth to lead with confidence, courage, and compassion through planning, decision-making, and community service opportunities."
     }
   ];
 
@@ -41,7 +41,7 @@ export default function Programs() {
         <FadeIn className={styles.intro}>
           <h1>Our <span className="text-gradient">Programs</span></h1>
           <p>
-            Our mission is to develop purpose and character in youth ages 9-18. Each program is designed to provide guidance and supportive mentoring relationships.
+            The Afri-Female and Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education. Each session is led by qualified professionals who bring real-world knowledge and inspiration directly to our youth.
           </p>
         </FadeIn>
 

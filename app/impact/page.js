@@ -3,7 +3,7 @@ export default function Impact() {
     {
       name: "Marcus R.",
       year: "2018 Alumnus",
-      quote: "Afri-Female Institute gave me the confidence to pursue my degree in Engineering. The one-on-one mentoring was a game-changer for me.",
+      quote: "The Afri-Female and Male Institute gave me the confidence to pursue my degree in Engineering. The STEAM workshops and one-on-one mentoring were a game-changer for me.",
       impact: "Now a practicing Civil Engineer in Delaware."
     },
     {
@@ -15,7 +15,7 @@ export default function Impact() {
     {
       name: "Darnell T.",
       year: "2022 Alumnus",
-      quote: "The leadership workshops helped me find my voice. I never thought I could be a community leader until I joined Afri-Female.",
+      quote: "The leadership workshops helped me find my voice. I never thought I could be a community leader until I joined the Institute.",
       impact: "Serving as a Student Government President."
     }
   ];
@@ -66,7 +66,7 @@ export default function Impact() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 style={{ color: 'white', marginBottom: '1.5rem' }}>Over 25 Years of Community Growth</h2>
           <p style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto 3rem', opacity: 0.9 }}>
-            From our founding in 1998 to our expansion across Delaware and New Jersey, our mission remains the same: nurturing the next generation of leaders.
+            From our founding in 1998 to our expansion across Delaware and New Jersey, our mission remains the same: empowering youth through mentoring, STEAM-based learning, and culturally grounded education.
           </p>
           <div style={{
             display: 'inline-grid',

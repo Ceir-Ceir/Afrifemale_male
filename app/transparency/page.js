@@ -21,7 +21,7 @@ export default function Transparency() {
         <FadeIn className={styles.intro}>
           <h1>Financial <span className="text-gradient">Transparency</span></h1>
           <p>
-            At Afri-Female Institute Inc., we believe in radical accountability. Your donations are an investment in the next generation, and we treat them with the utmost professional care.
+            At the Afri-Female and Male Institute, Inc., we believe in radical accountability. Your donations are an investment in the next generation, and we treat them with the utmost professional care.
           </p>
         </FadeIn>
 
@@ -75,7 +75,7 @@ export default function Transparency() {
           }}>
             <h2 style={{ marginBottom: '1.5rem' }}>Our Commitment to You</h2>
             <p style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto 2.5rem', opacity: 0.8 }}>
-              Afri-Female Institute Inc. is a registered 501(c)(3) tax-exempt organization. All donations are tax-deductible to the extent allowed by law.
+              Afri-Female and Male Institute, Inc. is a registered 501(c)(3) tax-exempt organization. All donations are tax-deductible to the extent allowed by law.
             </p>
             <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <div style={{ fontWeight: 800, color: 'var(--color-secondary)' }}>EIN: 302-697-2887</div>

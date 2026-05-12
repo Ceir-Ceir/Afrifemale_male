@@ -6,7 +6,7 @@ export default function Leadership() {
     {
       name: "Jessie Green",
       role: "Executive Director / Founder",
-      bio: "Jessie Green is a retired Budget Analyst who served the Department of Defense U.S. Army for 38 years. She has an associate degree from the Atlanta Business College and a Bachelor of Art degree in Christian studies and Business from Grand Canyon University. She founded the Afri-Female Institute in 1998 with the sole purpose of addressing the long-range needs of at-risk youth and their families. Jessie has many years of leadership roles in nonprofits and government, including serving as an elected official for the Willingboro Board of Education for nine years.",
+      bio: "Jessie Green is a retired Budget Analyst who served the Department of Defense U.S. Army for 38 years. She has an associate degree from the Atlanta Business College and a Bachelor of Art degree in Christian studies and Business from Grand Canyon University. She founded the Afri-Female and Male Institute in 1998 with the sole purpose of addressing the long-range needs of at-risk youth and their families. Jessie has many years of leadership roles in nonprofits and government, including serving as an elected official for the Willingboro Board of Education for nine years.",
       img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/jessie.JPG"
     },
     {
@@ -41,14 +41,14 @@ export default function Leadership() {
               <h1>{boardMembers[0].name}</h1>
               <span className={styles.title}>{boardMembers[0].role}</span>
               <p>
-                Jessie Green founded the Afri-Female Institute Inc. in 1998 with a vision to create a safe space for young girls to grow, learn, and lead. 
+                Jessie Green founded the Afri-Female and Male Institute in 1998 with a vision to create a safe space for young people to grow, learn, and lead. 
                 Her professional background in budget administration for the Department of Defense provided the foundational trust and discipline required to build a sustainable non-profit.
               </p>
               <p>
-                Currently, she serves on the Board of Directors for DIMH where she volunteers at the Resource Center for Homeless Men, and she is an active leader and licensed Evangelist in the A.M.E. Church. Today, she leads the institute's expansion into an all-inclusive space, ensuring that every youth who walks through our doors is met with the support and guidance they need to succeed.
+                Currently, she serves on the Board of Directors for DIMH where she volunteers at the Resource Center for Homeless Men, and she is an active leader and licensed Evangelist in the A.M.E. Church. Today, she leads the institute's mission of empowering youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education.
               </p>
               <p>
-                "Our mission is simple yet profound: to develop purpose and character. When a child knows who they are and what they are capable of, there is no limit to what they can achieve." — Jessie Green
+                "Our mission is simple yet profound: to build purpose, character, and strong leaders. When a child knows who they are and what they are capable of, there is no limit to what they can achieve." — Jessie Green
               </p>
             </SlideInRight>
           </div>
@@ -60,7 +60,7 @@ export default function Leadership() {
               <h2>Our History & Purpose</h2>
               <div className={styles.historyText}>
                 <p>
-                  In 1998, after witnessing a cafeteria brawl involving several girls, she knew as an Educator, she had to step in. Jessie Green reached out to professional colleagues with her vision to teach girls that this type of behavior is not the norm. Seeing a need to help young girls project and conduct themselves in a manner that spoke of respect and self worth the Afri-Female Institute was born.
+                  In 1998, after witnessing a cafeteria brawl involving several girls, she knew as an Educator, she had to step in. Jessie Green reached out to professional colleagues with her vision to teach girls that this type of behavior is not the norm. Seeing a need to help young girls project and conduct themselves in a manner that spoke of respect and self worth the Afri-Female and Male Institute was born.
                 </p>
                 <p>
                   Partnering with community members, professional colleagues and associates Jessie sought to change how these young girls saw and outwardly portrayed themselves. Introducing the girls to professional speakers, models and even video-taping them as they sat with unladylike postures all were part of a program to educate, uplift and bring out the best in these girls that Jessie and the original founders believed was within each one of them.

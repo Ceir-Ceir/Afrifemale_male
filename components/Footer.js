@@ -8,8 +8,8 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.brandInfo}>
-            <Image src="/images/logo.png" alt="Afri-Female Institute Logo" width={150} height={150} style={{ marginBottom: '1rem' }} />
-            <p>Developing purpose and character in young girls and boys ages 9-18. Empowering future leaders since 1998.</p>
+            <Image src="/images/logo.png" alt="Afri-Female and Male Institute Logo" width={150} height={150} style={{ marginBottom: '1rem' }} />
+            <p>Empowering youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education. Building Purpose. Shaping Leaders.</p>
           </div>
 
           <div className={styles.footerCol}>
@@ -39,8 +39,8 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottomBar}>
-          <p>Afri-Female Institute Inc. is a registered 501(c)(3) non-profit organization.</p>
-          <p>© 1998 - 2026 Afri-Female Institute Inc. All rights reserved.</p>
+          <p>Afri-Female and Male Institute, Inc. is a registered 501(c)(3) non-profit organization.</p>
+          <p>© 1998 - 2026 Afri-Female and Male Institute, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Afri-Female Institute Inc. | Empowering Future Leaders",
-  description: "Established in 1998, Afri-Female Institute Inc. is a non-profit dedicated to developing purpose and character in youth ages 9-18.",
+  title: "Afri-Female and Male Institute, Inc. | Building Purpose. Shaping Leaders.",
+  description: "The Afri-Female and Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education.",
 };
 
 export default function RootLayout({ children }) {
