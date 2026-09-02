@@ -5,25 +5,25 @@ export default function Leadership() {
   const boardMembers = [
     {
       name: "Jessie Green",
-      role: "Executive Director / Founder",
-      bio: "Jessie Green is a retired Budget Analyst who served the Department of Defense U.S. Army for 38 years. She has an associate degree from the Atlanta Business College and a Bachelor of Art degree in Christian studies and Business from Grand Canyon University. She founded the Afri-Female and Male Institute in 1998 with the sole purpose of addressing the long-range needs of at-risk youth and their families. Jessie has many years of leadership roles in nonprofits and government, including serving as an elected official for the Willingboro Board of Education for nine years.",
+      role: "President / Executive Director / Founder",
+      bio: "Jessie Green is a retired Budget Analyst who served the Department of Defense U.S. Army for 38 years. She has an associate degree from the Atlanta Business College and a Bachelor of Art degree in Christian studies and Business from Grand Canyon University. She founded the AfriFemale-Male Institute in 1998 with the sole purpose of addressing the long-range needs of at-risk youth and their families. Jessie has many years of leadership roles in nonprofits and government, including serving as an elected official for the Willingboro Board of Education for nine years.",
       img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/jessie.JPG"
     },
     {
       name: "Pastor Kevin L. Kelley",
-      role: "Board Member",
+      role: "Vice President",
       bio: "Pastor Kevin L. Kelley is a certified life coach, motivational speaker, and founder of Life By Design Coaching. With over 30 years of professional IT experience and as a U.S. Air Force Veteran, Kevin brings leadership, discipline, and real-world wisdom to his roles. He is the host of The Father's Coach Podcast and proudly serves as a mentor.",
       img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/kelley.JPG"
     },
     {
       name: "Rev. Michael Morgan",
-      role: "Board Member",
+      role: "Treasurer",
       bio: "Reverend Michael Morgan is a veteran of the United States Air Force and has had several Pastoral Assignments across Delaware and Pennsylvania. He holds a Bachelor of Arts in Sociology, two Master's degrees, and a Master of Divinity. He brings a deep commitment to faith, education, and community service to the organization.",
       img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/morgan.jpeg"
     },
     {
       name: "Tanya S. Ellis",
-      role: "Board Member",
+      role: "Secretary",
       bio: "Tanya S. Ellis has over 40 years of experience in Quality Assurance and Food Safety, holding regional leadership roles with global organizations. She holds a B.S. in Industrial Engineering from The University of Dayton. Tanya was appointed an Examiner for the prestigious Malcolm Baldrige National Quality Award and brings her expertise in organizational excellence.",
       img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/tanya.jpg"
     }

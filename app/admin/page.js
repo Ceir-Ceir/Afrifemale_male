@@ -156,7 +156,7 @@ export default function AdminPage() {
           <div className={styles.pinCard}>
             <div className={styles.lockIcon}>🔒</div>
             <h1>Admin Access</h1>
-            <p>Enter your PIN to manage event photos.</p>
+            <p>Enter your PIN to manage event photos. <em>(Default PIN: 1998)</em></p>
             <form onSubmit={handlePinSubmit} className={styles.pinForm}>
               <input
                 type="password"
@@ -234,7 +234,7 @@ export default function AdminPage() {
                     onChange={(e) => setEventYear(e.target.value)}
                     className={styles.selectInput}
                   >
-                    {[2026, 2025, 2024, 2023, 2022, 2021, 2020].map(y => (
+                    {Array.from({ length: new Date().getFullYear() - 1998 + 5 }, (_, i) => new Date().getFullYear() + 2 - i).map(y => (
                       <option key={y} value={y}>{y}</option>
                     ))}
                   </select>

@@ -33,12 +33,33 @@
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
 }
 
 .programCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   border-color: var(--color-primary);
+}
+
+.comingSoonRibbon {
+  position: absolute;
+  top: 24px;
+  right: -34px;
+  width: 150px;
+  background: linear-gradient(135deg, #e63946, #c84869);
+  color: white;
+  padding: 0.35rem 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.35);
+  z-index: 2;
+  pointer-events: none;
+  text-align: center;
 }
 
 .iconWrapper {
@@ -71,14 +92,228 @@
   gap: 0.5rem;
   color: var(--color-primary);
   font-weight: 600;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  cursor: pointer;
   transition: var(--transition-smooth);
 }
 
 .cta:hover {
   gap: 0.8rem;
+  color: var(--color-secondary);
 }
 
-@media (max-width: 768px) {
+/* Modal Popout */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 24px;
+  max-width: 950px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(200, 72, 105, 0.15);
+  color: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+}
+
+.modalLeft {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modalHeader {
+  margin-bottom: 1.5rem;
+}
+
+.modalHeaderTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.modalIcon {
+  font-size: 2rem;
+}
+
+.modalTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1.2;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.ageBadge {
+  background-color: rgba(200, 72, 105, 0.1);
+  color: var(--color-primary);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.freqBadge {
+  background-color: rgba(33, 62, 140, 0.1);
+  color: var(--color-secondary);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.modalBodyText {
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.highlightsTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.highlightsList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.highlightsList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.modalRight {
+  position: relative;
+  background-color: #f7fafc;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imageOverlayLabel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2.5rem 1.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 850px) {
+  .modalGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modalRight {
+    height: 280px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 24px;
+  }
+  
+  .modalLeft {
+    padding: 1.75rem;
+  }
+
   .intro h1 {
     font-size: 2.2rem;
   }

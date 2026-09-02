@@ -8,7 +8,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.brandInfo}>
-            <Image src="/images/logo.png" alt="Afri-Female and Male Institute Logo" width={150} height={150} style={{ marginBottom: '1rem' }} />
+            <Image src="/images/logo.png" alt="AfriFemale-Male Institute Logo" width={150} height={150} style={{ marginBottom: '1rem' }} />
             <p>Empowering youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education. Building Purpose. Shaping Leaders.</p>
           </div>
 
@@ -18,8 +18,10 @@ export default function Footer() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about/leadership">Leadership</Link></li>
               <li><Link href="/programs">Programs</Link></li>
+              <li><Link href="/graduates">Our Graduates</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/transparency">Our Impact</Link></li>
+              <li><Link href="/admin">Admin Portal</Link></li>
               <li><a href="https://www.youhelp.com/mental-health-fair/donate">Support Us</a></li>
             </ul>
           </div>
@@ -39,8 +41,8 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottomBar}>
-          <p>Afri-Female and Male Institute, Inc. is a registered 501(c)(3) non-profit organization.</p>
-          <p>© 1998 - 2026 Afri-Female and Male Institute, Inc. All rights reserved.</p>
+          <p>AfriFemale-Male Institute, Inc. is a registered 501(c)(3) non-profit organization.</p>
+          <p>© 1998 - 2026 AfriFemale-Male Institute, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
