@@ -72,7 +72,8 @@ export default function Leadership() {
     {
       name: "Sonia Cortez",
       role: "Board Member",
-      img: null
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/sonia.jpg",
+      imgPosition: "center 15%"
     },
     {
       name: "Kizzi Green",
