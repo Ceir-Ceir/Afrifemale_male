@@ -131,7 +131,7 @@ export default function Programs() {
         <FadeIn className={styles.intro}>
           <h1>Our <span className="text-gradient">Programs</span></h1>
           <p>
-            The AfriFemale-Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education. Each session is led by qualified professionals who bring real-world knowledge and inspiration directly to our youth.
+            The Afri-Female and Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education. Each session is led by qualified professionals who bring real-world knowledge and inspiration directly to our youth.
           </p>
         </FadeIn>
 
@@ -201,7 +201,7 @@ export default function Programs() {
                 </div>
 
                 <a 
-                  href="https://www.youhelp.com/mental-health-fair/donate"
+                  href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-23892"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="primary-btn" 
@@ -241,7 +241,13 @@ export default function Programs() {
           <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 2.5rem', opacity: 0.9 }}>
             Your support helps us keep these programs free and accessible to the youth who need them most.
           </p>
-          <a href="https://www.youhelp.com/mental-health-fair/donate" className="secondary-btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '1rem 2.5rem' }}>
+          <a 
+            href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-23892" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-btn" 
+            style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '1rem 2.5rem' }}
+          >
             Support Us
           </a>
         </FadeIn>

@@ -28,7 +28,7 @@ export default function Transparency() {
         <FadeIn className={styles.intro}>
           <h1>Financial <span className="text-gradient">Transparency</span></h1>
           <p>
-            At the AfriFemale-Male Institute, Inc., we believe in radical accountability. Your donations are an investment in the next generation, and we treat them with the utmost professional care.
+            At the Afri-Female and Male Institute, Inc., we believe in radical accountability. Your donations are an investment in the next generation, and we treat them with the utmost professional care.
           </p>
         </FadeIn>
 
@@ -79,7 +79,7 @@ export default function Transparency() {
                 </div>
               </div>
               <p style={{ fontSize: '0.95rem', opacity: 0.9, lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                Access the official signed bylaws of the AfriFemale-Male Institute, Inc., establishing our non-profit governance, board structure, and operational standards.
+                Access the official signed bylaws of the Afri-Female and Male Institute, Inc., establishing our non-profit governance, board structure, and operational standards.
               </p>
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                 <button
@@ -151,6 +151,7 @@ export default function Transparency() {
         {showBylawsModal && (
           <FlipbookModal 
             pdfUrl={bylawsPdfUrl}
+            title="AFMI Official Signed Bylaws"
             onClose={() => setShowBylawsModal(false)}
           />
         )}
@@ -166,10 +167,9 @@ export default function Transparency() {
           }}>
             <h2 style={{ marginBottom: '1.5rem' }}>Our Commitment to You</h2>
             <p style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto 2.5rem', opacity: 0.8 }}>
-              AfriFemale-Male Institute, Inc. is a registered 501(c)(3) tax-exempt organization. All donations are tax-deductible to the extent allowed by law.
+              Afri-Female and Male Institute, Inc. is a registered 501(c)(3) tax-exempt organization. All donations are tax-deductible to the extent allowed by law.
             </p>
             <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <div style={{ fontWeight: 800, color: 'var(--color-secondary)' }}>EIN: 302-697-2887</div>
               <div style={{ fontWeight: 800, color: 'var(--color-secondary)' }}>Candid / GuideStar Gold</div>
               <div style={{ fontWeight: 800, color: 'var(--color-secondary)' }}>Charity Navigator Rated</div>
             </div>

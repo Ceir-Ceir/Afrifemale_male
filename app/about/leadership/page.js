@@ -1,31 +1,90 @@
 import styles from '@/styles/Leadership.module.css';
 import { SlideInLeft, SlideInRight, StaggerContainer, StaggerItem } from '@/components/Animations';
 
+function getInitials(name) {
+  if (!name) return '';
+  const parts = name.split(' ').filter(Boolean);
+  if (parts.length === 1) return parts[0].charAt(0).toUpperCase();
+  return (parts[0].charAt(0) + parts[parts.length - 1].charAt(0)).toUpperCase();
+}
+
 export default function Leadership() {
-  const boardMembers = [
-    {
-      name: "Jessie Green",
-      role: "President / Executive Director / Founder",
-      bio: "Jessie Green is a retired Budget Analyst who served the Department of Defense U.S. Army for 38 years. She has an associate degree from the Atlanta Business College and a Bachelor of Art degree in Christian studies and Business from Grand Canyon University. She founded the AfriFemale-Male Institute in 1998 with the sole purpose of addressing the long-range needs of at-risk youth and their families. Jessie has many years of leadership roles in nonprofits and government, including serving as an elected official for the Willingboro Board of Education for nine years.",
-      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/jessie.JPG"
-    },
+  const founder = {
+    name: "Jessie Green",
+    role: "President / Executive Director / Founder",
+    bio: "Jessie Green is a retired Budget Analyst who served the Department of Defense U.S. Army for 38 years. She has an associate degree from the Atlanta Business College and a Bachelor of Art degree in Christian studies and Business from Grand Canyon University. She founded the Afri-Female and Male Institute in 1998 with the sole purpose of addressing the long-range needs of at-risk youth and their families. Jessie has many years of leadership roles in nonprofits and government, including serving as an elected official for the Willingboro Board of Education for nine years.",
+    img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/jessie.JPG",
+    imgPosition: "center 15%"
+  };
+
+  const executiveBoard = [
     {
       name: "Pastor Kevin L. Kelley",
       role: "Vice President",
       bio: "Pastor Kevin L. Kelley is a certified life coach, motivational speaker, and founder of Life By Design Coaching. With over 30 years of professional IT experience and as a U.S. Air Force Veteran, Kevin brings leadership, discipline, and real-world wisdom to his roles. He is the host of The Father's Coach Podcast and proudly serves as a mentor.",
-      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/kelley.JPG"
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/pastor%20kelley%202.JPG",
+      imgPosition: "center 15%"
     },
     {
       name: "Rev. Michael Morgan",
       role: "Treasurer",
       bio: "Reverend Michael Morgan is a veteran of the United States Air Force and has had several Pastoral Assignments across Delaware and Pennsylvania. He holds a Bachelor of Arts in Sociology, two Master's degrees, and a Master of Divinity. He brings a deep commitment to faith, education, and community service to the organization.",
-      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/morgan.jpeg"
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/morgan.jpeg",
+      imgPosition: "center top"
     },
     {
       name: "Tanya S. Ellis",
       role: "Secretary",
       bio: "Tanya S. Ellis has over 40 years of experience in Quality Assurance and Food Safety, holding regional leadership roles with global organizations. She holds a B.S. in Industrial Engineering from The University of Dayton. Tanya was appointed an Examiner for the prestigious Malcolm Baldrige National Quality Award and brings her expertise in organizational excellence.",
-      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/tanya.jpg"
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/tanya.jpg",
+      imgPosition: "center 15%"
+    }
+  ];
+
+  const boardMembers = [
+    {
+      name: "Gerri Depp",
+      role: "Board Member",
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/gerry.jpg",
+      imgPosition: "center 15%"
+    },
+    {
+      name: "Hattie Hogan",
+      role: "Board Member",
+      img: null
+    },
+    {
+      name: "Michelle Mack-Williams",
+      role: "Board Member",
+      img: null
+    },
+    {
+      name: "Gina Green",
+      role: "Board Member",
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/Gemini_Generated_Image_s3dxa9s3dxa9s3dx.jpg",
+      imgPosition: "center 15%"
+    },
+    {
+      name: "Shania Ratsatt",
+      role: "Board Member",
+      img: null
+    },
+    {
+      name: "Sonia Cortez",
+      role: "Board Member",
+      img: null
+    },
+    {
+      name: "Kizzi Green",
+      role: "Board Member",
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/kizzy.jpg",
+      imgPosition: "center 0%"
+    },
+    {
+      name: "Robert Sherrell",
+      role: "Board Member",
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/robertstreeh.jpg",
+      imgPosition: "center 15%"
     }
   ];
 
@@ -35,11 +94,21 @@ export default function Leadership() {
         <section className={styles.founderSection}>
           <div className={styles.founderFlex}>
             <SlideInLeft className={styles.founderImage}>
-              <img src={boardMembers[0].img} alt="Jessie Green" style={{ width: '100%', display: 'block' }} />
+              <img 
+                src={founder.img} 
+                alt={founder.name} 
+                style={{ 
+                  width: '100%', 
+                  height: '480px', 
+                  objectFit: 'cover', 
+                  objectPosition: founder.imgPosition || 'center 15%',
+                  display: 'block' 
+                }} 
+              />
             </SlideInLeft>
             <SlideInRight className={styles.founderInfo}>
-              <h1>{boardMembers[0].name}</h1>
-              <span className={styles.title}>{boardMembers[0].role}</span>
+              <h1>{founder.name}</h1>
+              <span className={styles.title}>{founder.role}</span>
               <p>
                 Jessie Green founded the Afri-Female and Male Institute in 1998 with a vision to create a safe space for young people to grow, learn, and lead. 
                 Her professional background in budget administration for the Department of Defense provided the foundational trust and discipline required to build a sustainable non-profit.
@@ -104,12 +173,25 @@ export default function Leadership() {
         <section className={styles.boardSection}>
           <h2>Board of Directors</h2>
           <StaggerContainer className={styles.boardGrid}>
-            {boardMembers.slice(1).map((member, index) => (
+            {executiveBoard.map((member, index) => (
               <StaggerItem key={index} className={styles.boardCard}>
-                <div 
-                  className={styles.boardCardImg} 
-                  style={{ backgroundImage: `url(${member.img})` }}
-                ></div>
+                <div className={styles.boardCardImgWrapper}>
+                  {member.img ? (
+                    <img 
+                      src={member.img} 
+                      alt={member.name} 
+                      className={styles.boardCardImg} 
+                      style={{ objectPosition: member.imgPosition || 'center 15%' }}
+                    />
+                  ) : (
+                    <div className={styles.placeholderCardImg}>
+                      <svg viewBox="0 0 24 24" className={styles.placeholderAvatarIcon} fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      </svg>
+                      <span className={styles.placeholderInitials}>{getInitials(member.name)}</span>
+                    </div>
+                  )}
+                </div>
                 <div className={styles.boardCardContent}>
                   <h3>{member.name}</h3>
                   <span>{member.role}</span>
@@ -118,9 +200,41 @@ export default function Leadership() {
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          <div className={styles.membersSubSection}>
+            <h2>Board Members</h2>
+            <StaggerContainer className={styles.membersGrid}>
+              {boardMembers.map((member, index) => (
+                <StaggerItem key={index} className={styles.memberCard}>
+                  <div className={styles.boardCardImgWrapper}>
+                    {member.img ? (
+                      <img 
+                        src={member.img} 
+                        alt={member.name} 
+                        className={styles.boardCardImg} 
+                        style={{ objectPosition: member.imgPosition || 'center 15%' }}
+                      />
+                    ) : (
+                      <div className={styles.placeholderCardImg}>
+                        <svg viewBox="0 0 24 24" className={styles.placeholderAvatarIcon} fill="currentColor">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                        <span className={styles.placeholderInitials}>{getInitials(member.name)}</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className={styles.memberCardContent}>
+                    <h3>{member.name}</h3>
+                    <span>{member.role}</span>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </div>
         </section>
       </div>
     </div>
   );
 }
+
 

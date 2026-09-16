@@ -11,8 +11,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
-          <Image src="/images/logo.png" alt="AfriFemale-Male Institute Logo" width={50} height={50} style={{ objectFit: 'contain', marginRight: '10px' }} />
-          AFRI<span className={styles.logoHighlight}>FEMALE-MALE</span>
+          <Image src="/images/logo.png" alt="Afri-Female and Male Institute Logo" width={46} height={46} style={{ objectFit: 'contain', marginRight: '8px' }} />
+          AFRI-FEMALE <span className={styles.logoHighlight}>AND MALE INSTITUTE</span>
         </Link>
 
         {/* Mobile Hamburger Button */}
@@ -31,7 +31,7 @@ export default function Header() {
           <Link href="/graduates" className={styles.navLink} onClick={() => setMobileOpen(false)}>Our Graduates</Link>
           <Link href="/gallery" className={styles.navLink} onClick={() => setMobileOpen(false)}>Gallery</Link>
           <Link href="/transparency" className={styles.navLink} onClick={() => setMobileOpen(false)}>Our Impact</Link>
-          <a href="https://www.youhelp.com/mental-health-fair/donate" className={styles.donateBtn} onClick={() => setMobileOpen(false)}>
+          <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-23892" target="_blank" rel="noopener noreferrer" className={styles.donateBtn} onClick={() => setMobileOpen(false)}>
             Support Us
           </a>
         </nav>

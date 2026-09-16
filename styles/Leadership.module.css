@@ -67,6 +67,8 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
 }
 
 .boardCard:hover {
@@ -74,15 +76,53 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.boardCardImg {
-  height: 300px;
+.boardCardImgWrapper {
+  height: 320px;
+  width: 100%;
   background-color: #eee;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.boardCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.placeholderCardImg {
+  height: 320px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.placeholderAvatarIcon {
+  width: 72px;
+  height: 72px;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.placeholderInitials {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .boardCardContent {
   padding: var(--space-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .boardCardContent h3 {
@@ -100,6 +140,56 @@
 .boardCardContent p {
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* Board Members Section */
+.membersSubSection {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.membersSubSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+}
+
+.membersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+.memberCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-smooth);
+  text-align: center;
+}
+
+.memberCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.memberCardContent {
+  padding: 1.25rem var(--space-sm);
+}
+
+.memberCardContent h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-secondary);
+}
+
+.memberCardContent span {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
 }
 
 /* History Section */
@@ -178,3 +268,4 @@
     max-width: 400px;
   }
 }
+

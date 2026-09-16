@@ -2,7 +2,7 @@ import styles from '@/styles/Graduates.module.css';
 import { FadeIn, SlideInLeft, SlideInRight, StaggerContainer, StaggerItem } from '@/components/Animations';
 
 export const metadata = {
-  title: 'Our Graduates | AfriFemale-Male Institute',
+  title: 'Our Graduates | Afri-Female and Male Institute',
   description: 'Celebrating the achievements, scholarships, and resilience of our Rites of Passage graduates and scholars.',
 };
 
@@ -24,7 +24,7 @@ export default function GraduatesPage() {
             <SlideInLeft className={styles.ropText}>
               <h2>The Rites of Passage Program</h2>
               <p>
-                The Rites of Passage program is a cornerstone of the AfriFemale-Male Institute. Designed to support youth who have grown with the Institute throughout their high school years, the program brings together family, mentors, and community members to celebrate their transition into adulthood.
+                The Rites of Passage program is a cornerstone of the Afri-Female and Male Institute. Designed to support youth who have grown with the Institute throughout their high school years, the program brings together family, mentors, and community members to celebrate their transition into adulthood.
               </p>
               <p>
                 During this culminating program, students are recognized for their unique gifts and perseverance. Shared community resources and financial scholarships are awarded to send each graduate forward into college, vocational training, or career paths with confidence and tangible support.
@@ -61,7 +61,7 @@ export default function GraduatesPage() {
             {/* Story text */}
             <div className={styles.storyContent}>
               <p>
-                A’akyrah Jackson joined the AfriFemale-Male Institute as a high school student and remained actively engaged in our workshops and programs from 9th through 12th grade. Throughout her time with AFMI, she demonstrated determination, leadership, and a deep commitment to personal growth. Her journey reflects the very purpose of our mission — to build character, confidence, cultural pride, and opportunity for youth.
+                A’akyrah Jackson joined the Afri-Female and Male Institute as a high school student and remained actively engaged in our workshops and programs from 9th through 12th grade. Throughout her time with AFMI, she demonstrated determination, leadership, and a deep commitment to personal growth. Her journey reflects the very purpose of our mission — to build character, confidence, cultural pride, and opportunity for youth.
               </p>
               
               <p>
@@ -77,7 +77,7 @@ export default function GraduatesPage() {
               </p>
 
               <p>
-                A’akyrah’s growth, resilience, and generosity embody the heart of the AfriFemale-Male Institute. We are honored to celebrate her achievements and grateful for her continued contributions to our community.
+                A’akyrah’s growth, resilience, and generosity embody the heart of the Afri-Female and Male Institute. We are honored to celebrate her achievements and grateful for her continued contributions to our community.
               </p>
 
               {/* Stat counters */}
@@ -140,7 +140,7 @@ export default function GraduatesPage() {
               Your donation directly funds scholarships, college technology, and educational supplies for graduating high school seniors.
             </p>
             <a 
-              href="https://www.youhelp.com/mental-health-fair/donate" 
+              href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-23892" 
               target="_blank"
               rel="noopener noreferrer"
               className="secondary-btn" 

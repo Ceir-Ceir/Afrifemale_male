@@ -21,12 +21,12 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.4rem;
+  gap: 8px;
+  font-size: 1.12rem;
   font-weight: 800;
   color: var(--color-secondary);
   text-transform: uppercase;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
 }
 
 .logoHighlight {

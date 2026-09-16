@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from '@/styles/Flipbook.module.css';
 
-export default function FlipbookModal({ pdfUrl, onClose }) {
+export default function FlipbookModal({ pdfUrl, title, onClose }) {
   const [pdfLib, setPdfLib] = useState(null);
   const [pdfDoc, setPdfDoc] = useState(null);
   const [numPages, setNumPages] = useState(0);
@@ -192,8 +192,8 @@ export default function FlipbookModal({ pdfUrl, onClose }) {
           <div className={styles.titleArea}>
             <span className={styles.journalIcon}>📖</span>
             <div>
-              <h3>2026 Community Recognition Banquet Souvenir Journal</h3>
-              <p>AfriFemale-Male Institute • 3D Interactive Flipbook</p>
+              <h3>{title || 'Afri-Female and Male Institute Souvenir Journal'}</h3>
+              <p>Afri-Female and Male Institute • 3D Interactive Flipbook</p>
             </div>
           </div>
 
@@ -226,7 +226,7 @@ export default function FlipbookModal({ pdfUrl, onClose }) {
           {loading ? (
             <div className={styles.loader}>
               <div className={styles.spinner}></div>
-              <p>Loading 3D Banquet Flipbook Journal...</p>
+              <p>Loading 3D Interactive Flipbook...</p>
             </div>
           ) : (
             <div className={styles.bookWrapper}>

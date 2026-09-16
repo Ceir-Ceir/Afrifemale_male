@@ -41,7 +41,7 @@ export default function Home() {
 
             <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', textTransform: 'uppercase', marginBottom: '0.75rem', display: 'block', letterSpacing: '2px', fontSize: '0.9rem' }}>Empowering Future Leaders</span>
             <h1>Building Purpose.<br/>Shaping Leaders.</h1>
-            <p>The AfriFemale-Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education.</p>
+            <p>The Afri-Female and Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education.</p>
             <div className={styles.btnGroup} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link href="/programs" className="primary-btn">Explore Programs</Link>
               <Link href="/about/leadership" className="secondary-btn" style={{ background: 'transparent', color: 'var(--color-secondary)', border: '2px solid var(--color-secondary)' }}>Meet Our Founder</Link>
@@ -65,6 +65,7 @@ export default function Home() {
       {showFlipbook && (
         <FlipbookModal 
           pdfUrl={flipbookPdfUrl}
+          title="2026 Community Recognition Banquet Souvenir Journal"
           onClose={() => setShowFlipbook(false)}
         />
       )}
@@ -106,7 +107,7 @@ export default function Home() {
               <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>Our Mission</span>
               <h2>Purpose-Driven &amp; Strong</h2>
               <p>
-                The AfriFemale-Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education. Through twice-monthly workshops led by dedicated professionals — including doctors, lawyers, clergy, educators, and community experts — we equip young people with life skills, confidence, purpose, and strong character to thrive in school, in their communities, and in life.
+                The Afri-Female and Male Institute empowers youth ages 8–18 through mentoring, STEAM-based learning, and culturally grounded education. Through twice-monthly workshops led by dedicated professionals — including doctors, lawyers, clergy, educators, and community experts — we equip young people with life skills, confidence, purpose, and strong character to thrive in school, in their communities, and in life.
               </p>
               <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem', display: 'block', marginTop: '2rem' }}>Our Vision</span>
               <p>
@@ -129,7 +130,7 @@ export default function Home() {
               <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>What We Stand For</span>
               <h2 style={{ marginTop: '0.5rem' }}>Our Core Values</h2>
               <p style={{ maxWidth: '700px', margin: '1rem auto 0', opacity: 0.8, fontSize: '1.1rem' }}>
-                At the AfriFemale-Male Institute, we uphold values that shape strong, confident, and culturally grounded young leaders.
+                At the Afri-Female and Male Institute, we uphold values that shape strong, confident, and culturally grounded young leaders.
               </p>
             </div>
           </FadeIn>
