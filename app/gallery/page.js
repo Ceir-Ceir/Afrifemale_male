@@ -1,8 +1,8 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styles from '@/styles/Gallery.module.css';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/Animations';
-import { listImagesInFolder, listFolders, STORAGE_BASE_URL } from '@/lib/supabase';
+import { listImagesInFolder, listFolders } from '@/lib/supabase';
 
 // Fallback data if dynamic listing fails
 const FALLBACK_DATA = {
@@ -21,14 +21,14 @@ function folderToLabel(folder) {
 // Excluded folders that aren't year-based event galleries
 const EXCLUDED_FOLDERS = ['Showcase', 'headshots', 'board_headshots'];
 
-// Individual image card that handles its own error state
-function GalleryImage({ src, alt }) {
+// Individual image card that handles its own error state and click event
+function GalleryImage({ src, alt, onClick }) {
   const [hasError, setHasError] = useState(false);
 
   if (hasError) return null;
 
   return (
-    <div className={styles.masonryItem}>
+    <div className={styles.masonryItem} onClick={onClick}>
       <img 
         src={src} 
         alt={alt}
@@ -45,7 +45,7 @@ function GalleryImage({ src, alt }) {
   );
 }
 
-function EventGallery({ year, eventFolder }) {
+function EventGallery({ year, eventFolder, onSelectImage }) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -61,9 +61,11 @@ function EventGallery({ year, eventFolder }) {
   // Don't render the section if there are no images
   if (!loading && images.length === 0) return null;
 
+  const eventTitle = folderToLabel(eventFolder);
+
   return (
     <div className={styles.eventSection}>
-      <h3 className={styles.eventTitle}>{folderToLabel(eventFolder)}</h3>
+      <h3 className={styles.eventTitle}>{eventTitle}</h3>
       {loading ? (
         <div className={styles.loadingContainer}>
           <div className={styles.loadingSpinner}></div>
@@ -75,7 +77,8 @@ function EventGallery({ year, eventFolder }) {
             <GalleryImage 
               key={img.name || index} 
               src={img.url} 
-              alt={`${folderToLabel(eventFolder)} photo ${index + 1}`}
+              alt={`${eventTitle} photo ${index + 1}`}
+              onClick={() => onSelectImage(images, index, eventTitle)}
             />
           ))}
         </div>
@@ -88,6 +91,7 @@ export default function GalleryPage() {
   const [galleryData, setGalleryData] = useState({});
   const [loading, setLoading] = useState(true);
   const [years, setYears] = useState([]);
+  const [activeLightbox, setActiveLightbox] = useState(null); // { images: [...], index: 0, title: '' }
 
   useEffect(() => {
     async function discoverGallery() {
@@ -120,6 +124,37 @@ export default function GalleryPage() {
     discoverGallery();
   }, []);
 
+  const handleSelectImage = (imagesList, selectedIndex, title) => {
+    setActiveLightbox({ images: imagesList, index: selectedIndex, title });
+  };
+
+  const handleNext = useCallback(() => {
+    if (!activeLightbox) return;
+    setActiveLightbox(prev => ({
+      ...prev,
+      index: (prev.index + 1) % prev.images.length
+    }));
+  }, [activeLightbox]);
+
+  const handlePrev = useCallback(() => {
+    if (!activeLightbox) return;
+    setActiveLightbox(prev => ({
+      ...prev,
+      index: (prev.index - 1 + prev.images.length) % prev.images.length
+    }));
+  }, [activeLightbox]);
+
+  useEffect(() => {
+    if (!activeLightbox) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setActiveLightbox(null);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') handleNext();
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') handlePrev();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeLightbox, handleNext, handlePrev]);
+
   return (
     <div className={styles.galleryPage}>
       <div className="container">
@@ -145,14 +180,73 @@ export default function GalleryPage() {
               <StaggerContainer>
                 {(galleryData[year] || []).map(eventFolder => (
                   <StaggerItem key={eventFolder}>
-                    <EventGallery year={year} eventFolder={eventFolder} />
+                    <EventGallery 
+                      year={year} 
+                      eventFolder={eventFolder} 
+                      onSelectImage={handleSelectImage}
+                    />
                   </StaggerItem>
                 ))}
               </StaggerContainer>
             </section>
           ))
         )}
+
+        {/* Lightbox Modal */}
+        {activeLightbox && (
+          <div 
+            className={styles.lightbox}
+            onClick={() => setActiveLightbox(null)}
+            role="dialog"
+            aria-modal="true"
+          >
+            <button 
+              type="button" 
+              className={styles.lightboxClose}
+              onClick={() => setActiveLightbox(null)}
+              aria-label="Close image viewer"
+            >
+              ✕
+            </button>
+
+            <div className={styles.lightboxContent} onClick={e => e.stopPropagation()}>
+              {activeLightbox.images.length > 1 && (
+                <button 
+                  type="button" 
+                  className={`${styles.lightboxNav} ${styles.lightboxPrev}`}
+                  onClick={handlePrev}
+                  aria-label="Previous image"
+                >
+                  ‹
+                </button>
+              )}
+
+              <img 
+                src={activeLightbox.images[activeLightbox.index].url} 
+                alt={`${activeLightbox.title} enlarged photo ${activeLightbox.index + 1}`} 
+                className={styles.lightboxImg}
+              />
+
+              {activeLightbox.images.length > 1 && (
+                <button 
+                  type="button" 
+                  className={`${styles.lightboxNav} ${styles.lightboxNext}`}
+                  onClick={handleNext}
+                  aria-label="Next image"
+                >
+                  ›
+                </button>
+              )}
+
+              <div className={styles.lightboxCaption}>
+                <h4>{activeLightbox.title}</h4>
+                <p>Photo {activeLightbox.index + 1} of {activeLightbox.images.length}</p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 }
+
