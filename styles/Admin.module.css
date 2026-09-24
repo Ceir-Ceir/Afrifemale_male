@@ -274,7 +274,8 @@
 .previewImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 4px;
 }
 
 .removeBtn {
@@ -579,7 +580,9 @@
 .manageImage {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 4px;
+  background: #12121a;
   display: block;
 }
 

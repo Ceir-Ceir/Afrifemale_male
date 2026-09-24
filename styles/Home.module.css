@@ -94,7 +94,9 @@
 .heroMainImage {
   width: 90%;
   height: 90%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f8f9fa;
+  padding: 8px;
   border-radius: 30px;
   box-shadow: 20px 20px 0 var(--color-primary);
   margin-left: 10%;

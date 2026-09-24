@@ -101,8 +101,9 @@ export default function Leadership() {
                 style={{ 
                   width: '100%', 
                   height: '480px', 
-                  objectFit: 'cover', 
-                  objectPosition: founder.imgPosition || 'center 15%',
+                  objectFit: 'contain', 
+                  backgroundColor: '#f8f9fa',
+                  padding: '8px',
                   display: 'block' 
                 }} 
               />
