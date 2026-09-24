@@ -45,18 +45,25 @@ export default function AdminPage() {
     }
   };
 
+  const isImageFile = (file) => {
+    if (!file) return false;
+    if (file.type && file.type.startsWith('image/')) return true;
+    const ext = (file.name || '').split('.').pop().toLowerCase();
+    return ['jpg', 'jpeg', 'png', 'webp', 'gif', 'heic', 'heif', 'bmp', 'svg'].includes(ext);
+  };
+
   // ===== UPLOAD LOGIC =====
   const handleDragOver = useCallback((e) => { e.preventDefault(); setIsDragging(true); }, []);
   const handleDragLeave = useCallback((e) => { e.preventDefault(); setIsDragging(false); }, []);
   const handleDrop = useCallback((e) => {
     e.preventDefault();
     setIsDragging(false);
-    const droppedFiles = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+    const droppedFiles = Array.from(e.dataTransfer.files).filter(isImageFile);
     setFiles(prev => [...prev, ...droppedFiles]);
   }, []);
 
   const handleFileSelect = (e) => {
-    const selectedFiles = Array.from(e.target.files).filter(f => f.type.startsWith('image/'));
+    const selectedFiles = Array.from(e.target.files).filter(isImageFile);
     setFiles(prev => [...prev, ...selectedFiles]);
   };
 
@@ -248,12 +255,12 @@ export default function AdminPage() {
                 onDrop={handleDrop}
                 onClick={() => fileInputRef.current?.click()}
               >
-                <input type="file" ref={fileInputRef} onChange={handleFileSelect} multiple accept="image/*" className={styles.fileInput} />
+                <input type="file" ref={fileInputRef} onChange={handleFileSelect} multiple accept="image/*,.heic,.HEIC,.jpg,.jpeg,.png,.webp" className={styles.fileInput} />
                 {files.length === 0 ? (
                   <div className={styles.dropZoneContent}>
                     <div className={styles.dropIcon}>📁</div>
                     <p className={styles.dropText}>Drag & drop photos here, or <span>click to browse</span></p>
-                    <p className={styles.dropHint}>JPG, JPEG, PNG — up to 50MB each</p>
+                    <p className={styles.dropHint}>Supports all photo formats (JPG, PNG, HEIC, WEBP) — up to 50MB per photo</p>
                   </div>
                 ) : (
                   <div className={styles.dropZoneContent}>
