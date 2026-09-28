@@ -13,7 +13,7 @@ export default function Leadership() {
     name: "Jessie Green",
     role: "President / Executive Director / Founder",
     bio: "Jessie Green is a retired Budget Analyst who served the Department of Defense U.S. Army for 38 years. She has an associate degree from the Atlanta Business College and a Bachelor of Art degree in Christian studies and Business from Grand Canyon University. She founded the Afri-Female and Male Institute in 1998 with the sole purpose of addressing the long-range needs of at-risk youth and their families. Jessie has many years of leadership roles in nonprofits and government, including serving as an elected official for the Willingboro Board of Education for nine years.",
-    img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/jessie.JPG",
+    img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/JessieGreene.jpg",
     imgPosition: "center 15%"
   };
 
@@ -51,12 +51,14 @@ export default function Leadership() {
     {
       name: "Hattie Hogan",
       role: "Board Member",
-      img: null
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/HattieHogan.jpg",
+      imgPosition: "center 15%"
     },
     {
       name: "Michelle Mack-Williams",
       role: "Board Member",
-      img: null
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/MichelleWilliams.jpg",
+      imgPosition: "center 15%"
     },
     {
       name: "Gina Green",
@@ -65,9 +67,10 @@ export default function Leadership() {
       imgPosition: "center 15%"
     },
     {
-      name: "Shania Ratsatt",
+      name: "Shyania Ratsatt",
       role: "Board Member",
-      img: null
+      img: "https://tapkdjdhyyxmsnbjbxae.supabase.co/storage/v1/object/public/client-images/headshots/SyHania.jpg",
+      imgPosition: "center 15%"
     },
     {
       name: "Sonia Cortez",

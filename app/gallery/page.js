@@ -13,6 +13,7 @@ const FALLBACK_DATA = {
 
 // Convert folder name to display label
 function folderToLabel(folder) {
+  if (folder === 'Rites_Passage') return 'Rite of Passage';
   return folder
     .replace(/_/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase());
