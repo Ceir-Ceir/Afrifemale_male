@@ -11,9 +11,31 @@ const FALLBACK_DATA = {
   '2024': ['Chess_Life', 'Edward_Ellis', 'Michael_Morgan', 'Peter_Davis_Mccormick', 'Rites_Passage']
 };
 
+const EVENT_TITLE_MAP = {
+  // 2026
+  'Links_Choclate_Hour': 'Community Support: Attending The Dover Links Chocolate Hour',
+  'Links_Chocolate_Hour': 'Community Support: Attending The Dover Links Chocolate Hour',
+  'Hour': 'Community Support: Attending The Dover Links Chocolate Hour',
+
+  // 2025
+  'Housekeeping': 'Ready, Set, Go! Essential Life Skills',
+  'Ready_Set_Go': 'Ready, Set, Go! Attendees',
+  'Community_Reg': 'Annual Community Recognition Celebration',
+
+  // 2024
+  'Rites_Passage': 'Rite of Passage Ceremony',
+  'Peter_Davis_Mccormick': 'Decision-Making with Peter Davis from McCormick and Company',
+  'Peter_Davis_McCormick': 'Decision-Making with Peter Davis from McCormick and Company',
+  'Michael_Morgan': 'Male Etiquette Practices with Michael Morgan',
+  'Edward_Ellis': 'Critical Thinking with Edward Ellis, General Dynamics US Boat- Retired',
+  'Chess_Life': 'Chess Moves-Life Skills with Retired US Navy Veteran, Kevin S. Colder'
+};
+
 // Convert folder name to display label
 function folderToLabel(folder) {
-  if (folder === 'Rites_Passage') return 'Rite of Passage';
+  if (EVENT_TITLE_MAP[folder]) {
+    return EVENT_TITLE_MAP[folder];
+  }
   return folder
     .replace(/_/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase());
